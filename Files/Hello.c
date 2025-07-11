@@ -1,4 +1,0 @@
-jiogjei
-gognvn
-orve
-orn
