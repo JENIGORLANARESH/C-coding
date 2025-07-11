@@ -18,16 +18,22 @@ int main(void){
 }
 
 int count(int *arr, int n){
-	int c = 0, temp = 0;
-	for(int i=0; i<n-1; i++){
-		for(int j=i+1; j<n; j++){
-			if(arr[i] == arr[j] && arr[j] != -1){
-				temp++;
-				arr[j] = -1;
-			}			
-		}
-		if(temp > 0) c++;
-		temp = 0;
-	}
-	return c;
+        int c = 0, isduplicate = 0;;
+        for(int i=0; i<n; i++){
+                if(arr[i] == -1) continue;
+                for(int j=i+1; j<n; j++){
+                        if(arr[i] == arr[j] && arr[j] != -1){
+                                isduplicate = 1;
+                                arr[j] = -1;
+                        }
+                }
+                if(isduplicate)
+                {
+                        c++;
+                        isduplicate = 0;
+                        arr[i] = -1;
+                }
+        }
+        return c;
 }
+
