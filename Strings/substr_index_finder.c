@@ -46,6 +46,12 @@ int main(void){
 	printf("Enter b : ");
 	fgets(b, sizeof(b), stdin);
 	b[strcspn(b, "\n")] = '\0';
+
+	 if(firstOccurence(a,b) == -1){
+                printf("Substring is not present in string.\n");
+                return 0;
+        }
+
 	
 	printf("First occurence of substring(index) : %d\n", firstOccurence(a,b));
 	printf("Last occurence of substring(index) : %d\n", lastOccurence(a,b));
