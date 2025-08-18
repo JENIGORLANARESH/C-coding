@@ -15,7 +15,7 @@ int main(void){
 
 
 	int occur = 1;
-	printf("All occurences of word : ");
+	printf("All occurences of word(Indices) : ");
 	for(int i=0; i<= slen - wlen; i++){
 		int found = 1;
 		for(int j=0; j<wlen; j++){
